@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>NODEJS | Tchat</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,600italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+		
+	    <div class="aplat" id="aplat"></div>
+	    <div class="form" id="wrapFormLogin">
+	    	<h1 class="h1">Bienvenue sur le tchat</h1>
+	    	<p>Veuillez entrez votre pseudo ainsi que votre email pour pouvoir discuter avec la communauté de l'anneau</p>
+	    	<form class="form-inline" id="loginForm" action="#">
+			  <input type="text" class="input-username" placeholder="Username" id="username">
+			  <input type="text" class="input-pass" placeholder="Email" id="email">
+			  <button type="submit" class="btn">Sign in</button>
+			</form>
+	    </div>
+
+
+	    	<div class="sidebar" id="sidebar">
+
+	    	</div>
+	    	<div id="messages">
+				<div class="bubble" id="bubble" style="display:none;">
+					<img src="{{{avatar}}}" class="user-thumbs">
+					<p class="contenu">
+						{{contenu}}
+					</p>
+					<span class="date">{{{date}}}</span>
+
+					<div class="cb"></div>
+				</div>
+	    	</div>
+			
+
+	    	<div class="form-message">
+	    		<form action="#" id="comment">
+	    			<input type="text" name="message" class="message" id="message">
+					<button class="btn" id="send" type="submit">Envoyer mon message ! </button>
+	    		</form>
+	    	</div>
+
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/mustache.js"></script>
+	<script type="text/javascript" src="http://localhost:1000/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="js/client.js"></script>
+</body>
+</body>
+</html>
